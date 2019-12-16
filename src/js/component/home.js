@@ -6,6 +6,10 @@ export function Home() {
 
 	const changeRed = () => {
 		lightOn("light red");
+
+		if (light == "light red off") {
+			lightOn("light red");
+		} else lightOn("light red off");
 	};
 
 	return (
