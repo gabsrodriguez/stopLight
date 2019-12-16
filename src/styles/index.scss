@@ -2,21 +2,29 @@
 
 .stop-light-container{
     background: black;
-    height: 550px;
-    width: 450px;
+    width: 45%;
+    margin: auto;
+    padding: 25px;
 }
+ .light{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: 20px auto;
+ };
 
 .red{
-    background: red;
-    height: 130px;
+    background: red;  
 }
 
 .yellow{
-    background: yellow;
-    height: 130px;
+    background: yellow; 
 }
 
 .green{
-    background: green;
-    height: 130px;
+    background: green; 
+}
+
+.off {
+    opacity: 0.25 !important;
 }
