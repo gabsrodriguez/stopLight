@@ -2,23 +2,35 @@ import React, { useState } from "react";
 
 //create your first component
 export function Home() {
-	const [light, lightOn] = useState("light red off");
+	const [light1, lightOn1] = useState("light red off");
 
 	const changeRed = () => {
-		lightOn("light red");
+		if (light1 === "light red off") {
+			lightOn1("light red");
+		} else lightOn1("light red off");
+	};
 
-		if (light == "light red off") {
-			lightOn("light red");
-		} else lightOn("light red off");
+	const [light2, lightOn2] = useState("light yellow off");
+
+	const changeYellow = () => {
+		if (light2 === "light yellow off") {
+			lightOn2("light yellow");
+		} else lightOn2("light yellow off");
+	};
+
+	const [light3, lightOn3] = useState("light green off");
+
+	const changeGreen = () => {
+		if (light3 === "light green off") {
+			lightOn3("light green");
+		} else lightOn3("light green off");
 	};
 
 	return (
 		<div className="stop-light-container">
-			<div className={light} onClick={changeRed}>
-				red
-			</div>
-			<div className="light yellow off">Yellow</div>
-			<div className="light green off">Green</div>
+			<div className={light1} onClick={changeRed} />
+			<div className={light2} onClick={changeYellow} />
+			<div className={light3} onClick={changeGreen} />
 		</div>
 	);
 }
