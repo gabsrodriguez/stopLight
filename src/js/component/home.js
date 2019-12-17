@@ -27,10 +27,23 @@ export function Home() {
 	};
 
 	return (
-		<div className="stop-light-container">
-			<div className={light1} onClick={changeRed} />
-			<div className={light2} onClick={changeYellow} />
-			<div className={light3} onClick={changeGreen} />
-		</div>
+		<>
+			<div className="stop-light-container">
+				<div className={light1} onClick={changeRed} />
+				<div className={light2} onClick={changeYellow} />
+				<div className={light3} onClick={changeGreen} />
+			</div>
+			<div className="buttons">
+				<button type="button" className="btn btn-light">
+					Click
+				</button>
+				<button type="button" className="btn btn-light">
+					Timer
+				</button>
+				<button type="button" className="btn btn-light">
+					Off
+				</button>
+			</div>
+		</>
 	);
 }
