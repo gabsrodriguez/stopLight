@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 //create your first component
 export function Home() {
 	const [light1, setLight1] = useState("light red off");
-
+	const [light2, setLight2] = useState("light yellow off");
+	const [light3, setLight3] = useState("light green off");
+	const [counter, setCounter] = useState(0);
+	const [auto, setAuto] = useState(false);
 	const changeRed = () => {
 		if (light1 === "light red off") {
 			setLight1("light red");
 		} else setLight1("light red off");
 	};
-
-	const [light2, setLight2] = useState("light yellow off");
 
 	const changeYellow = () => {
 		if (light2 === "light yellow off") {
@@ -18,21 +19,24 @@ export function Home() {
 		} else setLight2("light yellow off");
 	};
 
-	const [light3, setLight3] = useState("light green off");
-
 	const changeGreen = () => {
 		if (light3 === "light green off") {
 			setLight3("light green");
 		} else setLight3("light green off");
 	};
 
-	function lightOn() {
-		setInterval(function() {
-			setLight1("light red");
-			setLight2("light yellow");
+	useEffect(() => {
+		setTimeout(() => {
+			setCounter(counter + 1);
+		}, 1000);
+		if (auto === true && counter === 3) {
 			setLight3("light green");
-		}, 3000);
-	}
+		}
+	});
+
+	const lightOn = () => {
+		setAuto(true);
+	};
 
 	let lightOff = () => {
 		setLight1("light red off");
@@ -47,6 +51,7 @@ export function Home() {
 				<div className={light2} onClick={changeYellow} />
 				<div className={light3} onClick={changeGreen} />
 			</div>
+			<div>{counter}</div>
 			<div className="buttons">
 				<button
 					type="button"
@@ -55,7 +60,7 @@ export function Home() {
 					On
 				</button>
 				<button type="button" className="btn btn-light">
-					Timer
+					click
 				</button>
 				<button
 					type="button"
