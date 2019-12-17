@@ -1,14 +1,21 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+body{
+    background-image: url("https://cdn130.picsart.com/274309503001201.jpg?r1024x1024");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 .stop-light-container{
     background: black;
-    width: 45%;
+    width: 20%;
     margin: auto;
     padding: 25px;
 }
  .light{
-    height: 200px;
-    width: 200px;
+    height: 120px;
+    width: 120px;
     border-radius: 50%;
     margin: 20px auto;
  };
