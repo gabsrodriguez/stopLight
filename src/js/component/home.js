@@ -31,6 +31,18 @@ export function Home() {
 		}, 1000);
 		if (auto === true && counter === 3) {
 			setLight3("light green");
+			setLight1("light red off");
+			setLight1("light yellow off");
+		}
+		if (auto === true && counter === 6) {
+			setLight1("light red");
+			setLight2("light yellow off");
+			setLight3("light green off");
+		}
+		if (auto === true && counter === 9) {
+			setLight2("light yellow");
+			setLight1("light red off");
+			setLight3("light green off");
 		}
 	});
 
