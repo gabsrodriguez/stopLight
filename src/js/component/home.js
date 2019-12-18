@@ -10,17 +10,23 @@ export function Home() {
 	const changeRed = () => {
 		if (light1 === "light red off") {
 			setLight1("light red");
+			setLight2("light yellow off");
+			setLight3("light green off");
 		} else setLight1("light red off");
 	};
 
 	const changeYellow = () => {
 		if (light2 === "light yellow off") {
+			setLight1("light red off");
 			setLight2("light yellow");
+			setLight3("light green off");
 		} else setLight2("light yellow off");
 	};
 
 	const changeGreen = () => {
 		if (light3 === "light green off") {
+			setLight1("light red off");
+			setLight2("light yellow off");
 			setLight3("light green");
 		} else setLight3("light green off");
 	};
